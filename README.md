@@ -97,7 +97,7 @@ is the posterior variance matrix from the previous time step, ensuring the uncer
 
 ## Results & Discussion 
 
-State Decomposition: 
+### State Decomposition: 
 <p align="center">
   <img src="/Figures/Fig 8 Smoothed Decomp.png" width="80%">
   <br>
@@ -105,20 +105,24 @@ State Decomposition:
 </p>
 The structural decomposition successfully unbundled the complex signal. The top panel isolates the "Growth"—demonstrating the smooth, stochastic upward trajectory of the baseline trend. The middle panel isolates the "Pulse"—the $q=2$ harmonic wave proving that the seasonal amplitude remains consistent despite the rising trend.
 
-Residual Analysis: (Insert One-Step-Ahead Residual Plot Here)
+### Residual Analysis: (Insert One-Step-Ahead Residual Plot Here)
 A critical audit of the model's validity lies in its errors. The one-step-ahead residuals behave as a stationary white noise process, fluctuating randomly around zero with no discernible autocorrelation. This confirms the model is statistically valid and that the Trend, Seasonal, and AR components have successfully extracted all available systematic information from the data.
+
+<p align="center">
+  <img src="Figures/Fig 6  Seasonal Effect Resid plot.png" width="80%">
+  <br>
+  <b>Figure 7:</b> Isolated Seasonal Component 
+</p>
+
+
 <p align="center">
   <img src="/Figures/Fig 7 Resid plot.png" width="80%">
   <br>
   <b>Figure 6:</b> Residual Analysis
 </p>
-<p align="center">
-  <img src="/Figures/Fig 6 Seasonal Effect Resid plot.png" width="80%">
-  <br>
-  <b>Figure 8:</b> Isolated Seasonal Component 
-</p>
 
-Forecasting: 
+
+### Forecasting :
 <p align="center">
   <img src="/Figures/Fig 5 Coffee trend.png" width="80%">
   <br>

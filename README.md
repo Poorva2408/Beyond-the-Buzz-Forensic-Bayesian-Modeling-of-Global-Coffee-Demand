@@ -1,4 +1,4 @@
-# Analysing-Google-Trend-for-Coffee-
+# Beyond the Buzz: Forensic Bayesian Modeling of Global Coffee Demand
 ## Executive summary 
 Roughly 1 billion people worldwide drink coffee regularly, with an estimated 2.25 billion cups consumed every day. Coffee is the second most consumed beverage globally after water, with around 30-35% of the global population drinking it, largely driven by high consumption in the U.S. and Europe.
 

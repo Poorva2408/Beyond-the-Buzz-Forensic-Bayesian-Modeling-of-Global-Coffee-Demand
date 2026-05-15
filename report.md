@@ -23,22 +23,30 @@ component and a 2nd-order polynomial trend to track both the level and the growt
     <td align="center" style="border: none; width: 50%;">
       <img src="/Figures/Fig1 Interest Over Time.png" width="100%" alt="Model Comparison Audit">
       <br>
-      <b>Figure 2:</b> Model Comparison
+      <b>Figure 2:</b> Coffee Trend 2004-2026
     </td>
     <td align="center" style="border: none; width: 50%;">
-      <img src="/Figures/Final_System_AuditBS242.png" width="100%" alt="Sensitivity Analysis Audit">
+      <img src="/Figures/Fig 9 Decomposition.png" width="100%" alt="Decomposition">
       <br>
-      <b>Figure 3:</b> Sensitivity Analysis
+      <b>Figure 3:</b> Decomposition of Coffee Trend
     </td>
    </tr>
 </table>
 
-<p align="center">
-  <img src="/Figures/Model_Comparison_BS2Audit.png" width="600" alt="Resized Chart Description">
-  <br>
-  <b>Figure 4:</b> Final System Audit
-</p>
-
+<table style="width: 100%; border-collapse: collapse; border: none;">
+  <tr style="border: none;">
+    <td align="center" style="border: none; width: 50%;">
+      <img src="/Figures/Fig1 Interest Over Time.png" width="100%" alt="Model Comparison Audit">
+      <br>
+      <b>Figure 2:</b> Coffee Trend 2004-2026
+    </td>
+    <td align="center" style="border: none; width: 50%;">
+      <img src="/Figures/Fig 9 Decomposition.png" width="100%" alt="Decomposition">
+      <br>
+      <b>Figure 3:</b> Decomposition of Coffee Trend
+    </td>
+   </tr>
+</table>
 
 ### Mathematical Framework & Prior Selection
 The model follows the standard State-Space formulation:
@@ -59,6 +67,20 @@ We used an Inverse-Gamma prior ($n_0=1, S_0=0.01$) to allow for conjugate Bayesi
 
 ### Probabilistic Diagnostics (Bayesian Learning)
 A core requirement of this audit is proving the model "learns." We evaluate this through the evolution of the filtering and smoothing distributions.
+<table style="width: 100%; border-collapse: collapse; border: none;">
+  <tr style="border: none;">
+    <td align="center" style="border: none; width: 50%;">
+      <img src="/Figures/Fig1 Interest Over Time.png" width="100%" alt="Model Comparison Audit">
+      <br>
+      <b>Figure 2:</b> Coffee Trend 2004-2026
+    </td>
+    <td align="center" style="border: none; width: 50%;">
+      <img src="/Figures/Fig 9 Decomposition.png" width="100%" alt="Decomposition">
+      <br>
+      <b>Figure 3:</b> Decomposition of Coffee Trend
+    </td>
+   </tr>
+</table>
 
 Evolution of Belief (Filtering)
 As the recursive Kalman filter processes data, the posterior distribution of the Trend Level undergoes a visible transformation.

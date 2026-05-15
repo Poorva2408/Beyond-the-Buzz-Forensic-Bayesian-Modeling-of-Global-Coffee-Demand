@@ -53,22 +53,9 @@ We used an Inverse-Gamma prior ($n_0=1, S_0=0.01$) to allow for conjugate Bayesi
 
 ### Probabilistic Diagnostics (Bayesian Learning)
 A core requirement of this audit is proving the model "learns." We evaluate this through the evolution of the filtering and smoothing distributions.
-<table style="width: 100%; border-collapse: collapse; border: none;">
-  <tr style="border: none;">
-    <td align="center" style="border: none; width: 50%;">
-      <img src="/Figures/sub2.png" width="100%" alt="Model Comparison Audit">
-      <br>
-      <b>Figure 3:</b> Seasonal Effect 
-    </td>
-    <td align="center" style="border: none; width: 50%;">
-      <img src="/Figures/Filtervssmooth.png" width="100%" alt="Decomposition">
-      <br>
-      <b>Figure 4:</b> Filtering vs Smoothing
-    </td>
-   </tr>
-</table>
 
-Evolution of Belief (Filtering)
+#### Evolution of Belief (Filtering)
+
 As the recursive Kalman filter processes data, the posterior distribution of the Trend Level undergoes a visible transformation.
 At $t=10$: The distribution is diffuse (wide), indicating high initial uncertainty.
 At $t=100$: The distribution is concentrated (narrow and tall). This Posterior Concentration is mathematical proof of Bayesian convergence; 
@@ -89,11 +76,27 @@ the model has successfully reduced state uncertainty through evidence accumulati
    </tr>
 </table>
 
-The Value of Hindsight (Smoothing)
+#### The Value of Hindsight (Smoothing)
 We compare the Filtered distribution (real-time belief) with the Smoothed distribution (full-sample belief). 
 The smoothed estimates consistently exhibit lower variance. 
 By utilizing "future" data to refine past estimates, the smoother provides a more precise forensic 
 look at the 2021 structural break, correcting for the lags inherent in real-time filtering.
+
+<table style="width: 100%; border-collapse: collapse; border: none;">
+  <tr style="border: none;">
+    <td align="center" style="border: none; width: 50%;">
+      <img src="/Figures/sub3.png" width="100%" alt="Seasonal">
+      <br>
+      <b>Figure 5:</b> Seasonal Component Plot
+    </td>
+    <td align="center" style="border: none; width: 50%;">
+      <img src="/Figures/Decomsub.png" width="100%" alt="Decomposition">
+      <br>
+      <b>Figure 6:</b> Decomposition Plot
+    </td>
+   </tr>
+</table>
+
 
 ### Results & Discussion
 | Parameter | Value | Interpretation |
@@ -103,11 +106,32 @@ look at the 2021 structural break, correcting for the lags inherent in real-time
 | **AR Coefficients (phi_1, phi_2)** | 0.31, 0.67 | Significant short-term momentum |
 
 Structural Decomposition
+<table style="width: 100%; border-collapse: collapse; border: none;">
+  <tr style="border: none;">
+    <td align="center" style="border: none; width: 50%;">
+      <img src="/Figures/Seasonal.png" width="100%" alt="Seasonal">
+      <br>
+      <b>Figure 7:</b> Seasonal Component Plot
+    </td>
+    <td align="center" style="border: none; width: 50%;">
+      <img src="/Figures/Residuals.png" width="100%" alt="Residuals">
+      <br>
+      <b>Figure 8:</b> Residual Analysis
+    </td>
+   </tr>
+</table>
+
 The Growth (Trend): Isolated a stochastic upward trajectory that has nearly doubled the baseline interest since 2017.
 The Pulse (Seasonality): Two trigonometric harmonics ($q=2$) reveal a regular annual "winter spike," peaking every December/January.
+
 Residual Audit: One-step-ahead residuals behave as Gaussian white noise, confirming that all systematic information has been extracted.
 
 ### Forecasting & Uncertainty
+<p align="center">
+  <img src="/Figures/Fig 5 Coffee trend.png" width="50%">
+  <br>
+  <b>Figure 9:</b> Forecasting Coffee Trend for May 2026 - May 2027
+</p>
 The 20-month forecast predicts continued baseline growth through 2027. Crucially, the 95% Credible Intervals (the "blue fan") widen as the projection extends. 
 This accurately represents the compounding entropy in state-space modeling, providing a realistic risk-assessment framework for stakeholders.
 

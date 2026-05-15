@@ -18,32 +18,18 @@ The dataset comprises monthly observations from Jan 2017 to May 2025.
 Structural Break: A distinct acceleration in baseline interest is visible around 2021, establishing a higher volatility floor.
 Stationarity: The raw series is strictly non-stationary. ACF/PACF analysis confirms significant lags at 12 months, justifying a trigonometric seasonal 
 component and a 2nd-order polynomial trend to track both the level and the growth rate.
-<table style="width: 100%; border-collapse: collapse; border: none;">
-  <tr style="border: none;">
-    <td align="center" style="border: none; width: 50%;">
-      <img src="/Figures/Fig1 Interest Over Time.png" width="100%" alt="Model Comparison Audit">
-      <br>
-      <b>Figure 2:</b> Coffee Trend 2004-2026
-    </td>
-    <td align="center" style="border: none; width: 50%;">
-      <img src="/Figures/Fig 9 Decomposition.png" width="100%" alt="Decomposition">
-      <br>
-      <b>Figure 3:</b> Decomposition of Coffee Trend
-    </td>
-   </tr>
-</table>
 
 <table style="width: 100%; border-collapse: collapse; border: none;">
   <tr style="border: none;">
     <td align="center" style="border: none; width: 50%;">
-      <img src="/Figures/Fig1 Interest Over Time.png" width="100%" alt="Model Comparison Audit">
+      <img src="/Figures/Fig1 Interest Over Time.png" width="100%" alt="subset3">
       <br>
-      <b>Figure 2:</b> Coffee Trend 2004-2026
+      <b>Figure 1:</b> Coffee Trend 2004-2026
     </td>
     <td align="center" style="border: none; width: 50%;">
-      <img src="/Figures/Fig 9 Decomposition.png" width="100%" alt="Decomposition">
+      <img src="/Figures/subset3.png" width="100%" alt="subset3">
       <br>
-      <b>Figure 3:</b> Decomposition of Coffee Trend
+      <b>Figure 2:</b> Coffee Trend 2017-2026
     </td>
    </tr>
 </table>
@@ -70,14 +56,14 @@ A core requirement of this audit is proving the model "learns." We evaluate this
 <table style="width: 100%; border-collapse: collapse; border: none;">
   <tr style="border: none;">
     <td align="center" style="border: none; width: 50%;">
-      <img src="/Figures/Fig1 Interest Over Time.png" width="100%" alt="Model Comparison Audit">
+      <img src="/Figures/sub2.png" width="100%" alt="Model Comparison Audit">
       <br>
-      <b>Figure 2:</b> Coffee Trend 2004-2026
+      <b>Figure 3:</b> Seasonal Effect 
     </td>
     <td align="center" style="border: none; width: 50%;">
-      <img src="/Figures/Fig 9 Decomposition.png" width="100%" alt="Decomposition">
+      <img src="/Figures/Filtervssmooth.png" width="100%" alt="Decomposition">
       <br>
-      <b>Figure 3:</b> Decomposition of Coffee Trend
+      <b>Figure 4:</b> Filtering vs Smoothing
     </td>
    </tr>
 </table>
@@ -87,6 +73,21 @@ As the recursive Kalman filter processes data, the posterior distribution of the
 At $t=10$: The distribution is diffuse (wide), indicating high initial uncertainty.
 At $t=100$: The distribution is concentrated (narrow and tall). This Posterior Concentration is mathematical proof of Bayesian convergence; 
 the model has successfully reduced state uncertainty through evidence accumulation.
+
+<table style="width: 100%; border-collapse: collapse; border: none;">
+  <tr style="border: none;">
+    <td align="center" style="border: none; width: 50%;">
+      <img src="/Figures/sub2.png" width="100%" alt="Model Comparison Audit">
+      <br>
+      <b>Figure 3:</b> Seasonal Effect 
+    </td>
+    <td align="center" style="border: none; width: 50%;">
+      <img src="/Figures/Filtervssmooth.png" width="100%" alt="Decomposition">
+      <br>
+      <b>Figure 4:</b> Filtering vs Smoothing
+    </td>
+   </tr>
+</table>
 
 The Value of Hindsight (Smoothing)
 We compare the Filtered distribution (real-time belief) with the Smoothed distribution (full-sample belief). 
